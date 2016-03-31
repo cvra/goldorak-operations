@@ -6,7 +6,7 @@ sudo apt-get update
 sudo apt-get -y install salt-minion salt-common git
 
 rm -rf goldorak-operations
-git clone https://git.wise-robotics.com/xemtec/goldorak-operations.git
+git clone https://github.com/cvra/goldorak-operations.git
 
 sudo salt-call --local --file-root=goldorak-operations/salt/roots state.highstate
 
