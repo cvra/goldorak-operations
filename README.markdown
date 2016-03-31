@@ -1,7 +1,7 @@
 # Dev machine
 
 ## Installation on the Beaglebone black
-1. Install Ubuntu 14.04 on the laptop. The user is assumed to be `ubuntu`
+1. Install Ubuntu 14.04 on the board. The user is assumed to be `ubuntu`
 2. Bootstrap saltstack
 
     ```
@@ -15,5 +15,5 @@
 5. Run `sudo salt-call --local state.highstate`
 6. Reboot
 
-The laptop should now be fully provisionned.
+The board should now be fully provisionned.
 
