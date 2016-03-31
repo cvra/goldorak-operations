@@ -6,5 +6,3 @@ ubuntu:
             - sudo
             - dialout
             - plugdev
-            - vboxusers
-            - docker
