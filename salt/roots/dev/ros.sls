@@ -23,14 +23,14 @@ rospkg-python3:
         - name: rospkg
         - bin_env: /usr/local/bin/pip3
         - require:
-            - pkg: python3-pip
+            - cmd: get-pip3
 
 catkin-pkg-python3:
     pip.installed:
         - name: catkin-pkg
         - bin_env: /usr/local/bin/pip3
         - require:
-            - pkg: python3-pip
+            - cmd: get-pip3
 
 rosdep_init:
     cmd.run:
@@ -67,4 +67,3 @@ catkin_workspace:
         - creates: "/home/ubuntu/catkin_ws/src/CMakeLists.txt"
         - require:
             - file: catkin_workspace
-

@@ -20,3 +20,5 @@ silversearcher-ag:
 htop:
     pkg.installed
 
+curl:
+    pkg.installed
