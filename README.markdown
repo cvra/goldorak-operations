@@ -1,4 +1,4 @@
-# Dev machine
+# Goldorak BBB setup
 
 ## Installation on the Beaglebone black
 1. Install Ubuntu 14.04 on the board. The user is assumed to be `ubuntu`
@@ -17,3 +17,6 @@
 
 The board should now be fully provisionned.
 
+## Installation on the Beaglebone black, the short way
+1. `wget https://raw.githubusercontent.com/cvra/goldorak-operations/master/bootstrap.sh`
+2. As ubuntu user run `sh bootstrap.sh`
