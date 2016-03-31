@@ -5,9 +5,10 @@
 2. Bootstrap saltstack
 
     ```
-    sudo add-apt-repository ppa:saltstack/salt
+    sudo apt-get -y install software-properties-common
+    sudo add-apt-repository -y ppa:saltstack/salt
     sudo apt-get update
-    sudo apt-get install salt-minion salt-common
+    sudo apt-get -y install salt-minion salt-common
     ```
 3. Clone this repository somewhere
 4. Symlink to Salt `sudo ln -s /path/to/repo/salt/roots/ /srv/salt`
