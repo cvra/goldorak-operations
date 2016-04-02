@@ -20,3 +20,5 @@ RUN git clone https://github.com/cvra/goldorak-operations.git
 
 USER ubuntu
 RUN sudo salt-call --local --file-root=goldorak-operations/salt/roots state.highstate
+
+USER root
