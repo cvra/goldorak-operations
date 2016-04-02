@@ -61,7 +61,7 @@ catkin_workspace:
         - makedirs: True
 
     cmd.run:
-        - name: "source /opt/ros/indigo/setup.bash; catkin_init_workspace"
+        - name: "/usr/bin/bash source /opt/ros/indigo/setup.bash; catkin_init_workspace"
         - user: ubuntu
         - cwd: "/home/ubuntu/catkin_ws/src"
         - creates: "/home/ubuntu/catkin_ws/src/CMakeLists.txt"

@@ -1,6 +1,6 @@
 ubuntu:
     user.present:
-        - shell: /usr/bin/fish
+        - shell: /usr/bin/bash
         - home: /home/ubuntu
         - groups:
             - sudo
