@@ -50,6 +50,7 @@ gfortran:
     "ipython",
     "nose",
     "numpy",
+    "uavcan",
 ]%}
 {{ pkg }}-python3:
     pip.installed:

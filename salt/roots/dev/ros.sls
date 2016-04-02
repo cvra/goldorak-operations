@@ -11,6 +11,7 @@ ros_repo:
 
 {% for pkg in ["ros-indigo-ros-base",
                "python-rosdep", "python-rosinstall", "python-catkin-tools",
+               "ros-indigo-tf",
 ] %}
 {{ pkg }}:
     pkg.installed:

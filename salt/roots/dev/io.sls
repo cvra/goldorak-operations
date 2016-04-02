@@ -15,4 +15,6 @@ beaglebone-universal-io:
     - user: root
     - name: make install
     - unless: /usr/local/bin/config-pin
+    - require:
+        - pkg: build-essential
 

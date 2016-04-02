@@ -24,4 +24,6 @@ mraa:
         cp examples/mraa-gpio /usr/local/bin
         chmod +x examples/mraa-gpio
     - unless: /usr/local/bin/mraa-gpio
+    - require:
+        - pkg: build-essential
 
