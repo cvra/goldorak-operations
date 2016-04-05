@@ -1,6 +1,6 @@
 ubuntu:
     user.present:
-        - shell: /usr/bin/bash
+        - shell: /bin/bash
         - home: /home/ubuntu
         - groups:
             - sudo
