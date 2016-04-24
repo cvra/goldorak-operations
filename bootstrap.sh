@@ -8,6 +8,7 @@ sudo apt-get -y install salt-minion salt-common git
 rm -rf goldorak-operations
 git clone https://github.com/cvra/goldorak-operations.git
 
+export GIT_SSL_NO_VERIFY=1
 sudo salt-call --local --file-root=goldorak-operations/salt/roots state.highstate
 
 sudo reboot

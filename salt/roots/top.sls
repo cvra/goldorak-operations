@@ -1,5 +1,6 @@
 base:
     '*':
+        - etc.init
         - core
         - git
         - dev.io
