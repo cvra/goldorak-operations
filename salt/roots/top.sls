@@ -8,5 +8,6 @@ base:
         - dev.python
         - dev.mraa
         - dev.can
+        - dev.uavcan
         - dev.ros
         - users
