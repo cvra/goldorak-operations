@@ -27,9 +27,7 @@ can-setup:
         - user: root
         - cwd: /srv/salt/can
         - name: |
-            dtc -O dtb -o BB-DCAN1-00A0.dtbo -b 0 -@ BB-DCAN1-00A0.dts
-            cp BB-DCAN1-00A0.dtbo /lib/firmware
-            echo BB-DCAN1 > /sys/devices/platform/bone_capemgr/slots
+            echo BB-CAN1 > /sys/devices/platform/bone_capemgr/slots
             modprobe can
             modprobe can-dev
             modprobe can-raw
