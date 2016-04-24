@@ -25,7 +25,14 @@ can-utils:
 can-setup:
     cmd.run:
         - user: root
+        - cwd: /srv/salt/can
         - name: |
+            dtc -O dtb -o BB-DCAN1-00A0.dtbo -b 0 -@ BB-DCAN1-00A0.dts
+            cp BB-DCAN1-00A0.dtbo /lib/firmware
+            echo BB-DCAN1 > /sys/devices/platform/bone_capemgr/slots
+            modprobe can
+            modprobe can-dev
+            modprobe can-raw
             config-pin P9.24 can
             config-pin P9.26 can
             ip link set can1 up type can bitrate 1000000
