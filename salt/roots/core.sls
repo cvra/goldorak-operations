@@ -22,3 +22,6 @@ htop:
 
 curl:
     pkg.installed
+
+mosh:
+    pkg.installed
