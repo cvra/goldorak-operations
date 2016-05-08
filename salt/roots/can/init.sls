@@ -31,9 +31,15 @@ can-setup:
             modprobe can
             modprobe can-dev
             modprobe can-raw
-            config-pin P9.24 can
-            config-pin P9.26 can
-            ip link set can1 up type can bitrate 1000000
-            ifconfig can1 up
         - require:
             - cmd: can-utils
+
+can-bashrc-setup:
+    file.append:
+        - name: "/etc/bash.bashrc"
+        - text:
+            - "sudo ip link set can1 up type can bitrate 1000000"
+            - "sudo ifconfig can1 up"
+            - "sudo config-pin P9.24 can"
+            - "sudo config-pin P9.26 can"
+            - "sudo config-pin P8.4 lo"
