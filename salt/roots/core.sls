@@ -23,5 +23,15 @@ htop:
 curl:
     pkg.installed
 
+iptables:
+    pkg.installed
+
 mosh:
     pkg.installed
+
+mosh-ports:
+    cmd.run:
+        - user: root
+        - name: iptables -I INPUT 1 -p udp --dport 60000:61000 -j ACCEPT
+        - require:
+            - pkg: iptables
