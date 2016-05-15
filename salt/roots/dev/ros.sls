@@ -16,7 +16,9 @@ ros_repo:
                "ros-indigo-navigation",
                "ros-indigo-controller-manager",
                "ros-indigo-diff-drive-controller",
-               "ros-indigo-robot-state-publisher"
+               "ros-indigo-robot-state-publisher",
+               "ros-indigo-robot-smach",
+               "ros-indigo-robot-executive-smach"
 ] %}
 {{ pkg }}:
     pkg.installed:
