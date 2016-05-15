@@ -34,12 +34,24 @@ can-setup:
         - require:
             - cmd: can-utils
 
-can-bashrc-setup:
+can-modules-setup:
     file.append:
-        - name: "/etc/bash.bashrc"
+        - name: "/etc/modules"
         - text:
-            - "sudo ip link set can1 up type can bitrate 1000000"
-            - "sudo ifconfig can1 up"
-            - "sudo config-pin P9.24 can"
-            - "sudo config-pin P9.26 can"
-            - "sudo config-pin P8.4 lo"
+            - "can"
+            - "can_raw"
+            - "vcan"
+
+can-network-setup:
+    file.append:
+        - name: "/etc/network/interfaces"
+        - text:
+            - "allow-hotplug can1"
+            - "auto can1"
+            - "iface can1 can static"
+            - "    pre-up /usr/bin/env config-pin overlay cape-universaln"
+            - "    pre-up /usr/bin/env config-pin P9.24 can"
+            - "    pre-up /usr/bin/env config-pin P9.26 can"
+            - "    bitrate 1000000"
+            - "    samplepoint 0.875"
+
